@@ -16,7 +16,9 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
@@ -110,7 +112,19 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "java": {
+        "package": "com.github.alejandroq1113.awscdk_construct",
+        "maven": {
+          "groupId": "com.github.alejandroq1113",
+          "artifactId": "awscdk_construct"
+        }
+      },
+      "python": {
+        "distName": "awscdk-construct",
+        "module": "awscdk_construct"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

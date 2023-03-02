@@ -11,5 +11,15 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
+
+  publishToPypi: {
+    distName: 'awscdk-construct',
+    module: 'awscdk_construct',
+  },
+  publishToMaven: {
+    javaPackage: 'com.github.alejandroq1113.awscdk_construct',
+    mavenGroupId: 'com.github.alejandroq1113',
+    mavenArtifactId: 'awscdk_construct',
+  },
 });
 project.synth();
